@@ -1,3 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    background-color: bisque;
+  background-color: bisque;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+}
+
+.logo-wrap {
+  display: flex;
+}
+
+.selection-wrap {
+  display: flex;
+  column-gap: 20px;
+  width: 300px;
+  margin-top: 15px;
+}
+
+.header-main-wrap {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(118, 110, 110);
+}
+
+select {
+  width: 145px;
+  height: 30px;
+  border-radius: 8px;
+}
+
+.header-info {
+  text-align: center;
+}
+
+.logo-name {
+  color: white;
+  margin-top: 15px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
