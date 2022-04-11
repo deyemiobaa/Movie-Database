@@ -1,3 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    background-color: bisque;
+  background-color: bisque;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+}
+
+.logo-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.selection-wrap {
+  display: flex;
+  column-gap: 20px;
+  width: 300px;
+  align-items: center;
+}
+
+.header-main-wrap {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(118, 110, 110);
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+select {
+  width: 145px;
+  height: 30px;
+  border-radius: 8px;
+}
+
+.header-info {
+  text-align: center;
+}
+
+.logo-name {
+  color: white;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+@media only screen  and (max-width: 768px) {
+  .selection-wrap {
+    flex-direction: column;
+    row-gap: 12px;
+    padding: 10px 10px;
+  }
 }
