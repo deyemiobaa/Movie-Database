@@ -52,3 +52,11 @@ header {
   top: 0;
   width: 100%;
 }
+
+@media only screen  and (max-width: 768px) {
+  .selection-wrap {
+    flex-direction: column;
+    row-gap: 12px;
+    padding: 10px 10px;
+  }
+}
