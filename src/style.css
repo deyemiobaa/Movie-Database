@@ -15,19 +15,22 @@ body {
 
 .logo-wrap {
   display: flex;
+  align-items: center;
 }
 
 .selection-wrap {
   display: flex;
   column-gap: 20px;
   width: 300px;
-  margin-top: 15px;
+  align-items: center;
 }
 
 .header-main-wrap {
   display: flex;
   justify-content: space-between;
   background-color: rgb(118, 110, 110);
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 select {
@@ -42,7 +45,6 @@ select {
 
 .logo-name {
   color: white;
-  margin-top: 15px;
 }
 
 header {
