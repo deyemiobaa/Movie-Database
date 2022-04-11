@@ -1,0 +1,24 @@
+{
+  "name": "movie-database",
+  "version": "1.0.0",
+  "description": "JavaScript capstone project",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deyemiobaa/Movie-Database.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deyemiobaa/Movie-Database/issues"
+  },
+  "homepage": "https://github.com/deyemiobaa/Movie-Database#readme",
+  "dependencies": {
+    "jest": "^27.5.1",
+    "node-modules": "^1.0.1"
+  }
+}
