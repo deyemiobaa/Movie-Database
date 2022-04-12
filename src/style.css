@@ -266,14 +266,16 @@ footer > p > a {
     flex-direction: row;
     gap: 30px;
     align-items: center;
+    justify-content: space-around;
   }
 
   .movie-popup-img {
-    width: 50%;
+    width: 40%;
+    height: 600px;
   }
 
   .movie-popup-info {
-    width: 50%;
+    width: 55%;
     height: max-content;
   }
 
