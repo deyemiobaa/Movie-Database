@@ -1,11 +1,11 @@
-import { getvShow } from "./getvshow";
-import selector from "./selectors";
+import getvShow from './getvshow.js';
+import selector from './selectors.js';
 
-export const  renderShows  = (async()=>{
-    let render;
-const shows= await getvShow();
-     shows.forEach((e)=>{
-    render+= `
+const renderShows = (async () => {
+  let render;
+  const shows = await getvShow();
+  shows.forEach((e) => {
+    render += `
     <li class="show"  id=${e.id}><img src=${e.image.medium} alt="movie-poster" class="movie-poster">
     <h3 class="show-name">${e.name}</h3>
     <div class="show-btns">
@@ -16,9 +16,10 @@ const shows= await getvShow();
     </div>
     </li>
     `;
-    });
-   
-    selector.allShows.innerHTML = render.replace("undefined",'');
-    const movieSize =`<h3>${shows.length} Found in the Movie DabaBase</h3>`;
-    selector.movieDbInfo.innerHTML = movieSize;
+  });
+
+  selector.allShows.innerHTML = render.replace('undefined', '');
+  const movieSize = `<h3>${shows.length} Found in the Movie DabaBase</h3>`;
+  selector.movieDbInfo.innerHTML = movieSize;
 });
+export default renderShows;
