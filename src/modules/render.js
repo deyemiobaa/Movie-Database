@@ -1,8 +1,21 @@
 import getvShow from './getvshow.js';
 import selector from './selectors.js';
-import { Popup } from './popup.js';
+import Popup from './popup.js';
 
-export const renderShows = (async () => {
+const clickEvents = () => {
+  const popup = new Popup();
+  const showList = document.querySelectorAll('.fa-comment');
+  showList.forEach((e) => {
+    e.addEventListener('click', async () => {
+      const movieId = e.parentNode.parentNode.id;
+      const currentShow = await popup.getPopup(movieId);
+      popup.populatePopup(currentShow);
+    });
+  });
+  popup.closePopup();
+};
+
+const renderShows = (async () => {
   let render;
   const shows = await getvShow();
   shows.forEach((e) => {
@@ -25,15 +38,4 @@ export const renderShows = (async () => {
   clickEvents();
 });
 
-const clickEvents = () => {
-  const popup = new Popup();
-  const showList = document.querySelectorAll('.fa-comment');
-  showList.forEach((e) => {
-    e.addEventListener('click', async () => {
-      const movieId = e.parentNode.parentNode.id;
-      const currentShow = await popup.getPopup(movieId);
-      popup.populatePopup(currentShow);
-    });
-  })
-  popup.closePopup();
-}
+export default renderShows;

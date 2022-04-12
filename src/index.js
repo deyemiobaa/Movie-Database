@@ -1,4 +1,4 @@
 import './style.css';
-import { renderShows } from './modules/render.js';
+import renderShows from './modules/render.js';
 
 renderShows();
