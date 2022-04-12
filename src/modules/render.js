@@ -19,7 +19,7 @@ const renderShows = (async () => {
   });
 
   selector.allShows.innerHTML = render.replace('undefined', '');
-  const movieSize = `<h3>${shows.length} Found in the Movie DabaBase</h3>`;
+  const movieSize = `<h3>${shows.length} shows Found in the Movie DabaBase</h3>`;
   selector.movieDbInfo.innerHTML = movieSize;
 });
 export default renderShows;

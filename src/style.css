@@ -74,13 +74,20 @@ header {
   width: 100%;
 }
 
+#movie-db-info {
+  background: grey;
+  color: var(--color-secondary);
+  text-align: center;
+}
+
 #all-shows {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  column-gap: 30px;
   width: 80%;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 130px;
   list-style-type: none;
 }
 
