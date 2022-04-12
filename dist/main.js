@@ -116,7 +116,17 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\n\n//# sourceURL=webpack://movie-database/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_getvshow__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/getvshow */ \"./src/modules/getvshow.js\");\n\n\n\n\n//# sourceURL=webpack://movie-database/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/getvshow.js":
+/*!*********************************!*\
+  !*** ./src/modules/getvshow.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"getvShow\": () => (/* binding */ getvShow)\n/* harmony export */ });\nconst getvShow = async () => {\r\n    const response = await fetch('https://api.tvmaze.com/shows')\r\n    return response.json();\r\n  };\r\n  console.log(\"Result: \",getShows());\r\n  \n\n//# sourceURL=webpack://movie-database/./src/modules/getvshow.js?");
 
 /***/ })
 
