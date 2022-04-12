@@ -1,5 +1,19 @@
 import getvShow from './getvshow.js';
 import selector from './selectors.js';
+import Popup from './popup.js';
+
+const clickEvents = () => {
+  const popup = new Popup();
+  const showList = document.querySelectorAll('.fa-comment');
+  showList.forEach((e) => {
+    e.addEventListener('click', async () => {
+      const movieId = e.parentNode.parentNode.id;
+      const currentShow = await popup.getPopup(movieId);
+      popup.populatePopup(currentShow);
+    });
+  });
+  popup.closePopup();
+};
 
 const renderShows = (async () => {
   let render;
@@ -11,7 +25,7 @@ const renderShows = (async () => {
     <div class="show-btns">
     <i class="fa-solid fa-heart">
     </i>
-    <p ></p>
+    <p></p>
     <i class="fa-solid fa-comment"></i>
     </div>
     </li>
@@ -21,5 +35,7 @@ const renderShows = (async () => {
   selector.allShows.innerHTML = render.replace('undefined', '');
   const movieSize = `<h3>${shows.length} shows Found in the Movie DabaBase</h3>`;
   selector.movieDbInfo.innerHTML = movieSize;
+  clickEvents();
 });
+
 export default renderShows;

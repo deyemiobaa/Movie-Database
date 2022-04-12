@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie DataBase</title>
     <script src="https://kit.fontawesome.com/eb94992e2c.js" crossorigin="anonymous"></script>
-
   </head>
 
   <body>
@@ -43,11 +42,49 @@
       </div>
       <section id="movie-db-info"></section>
     </header>
-    
-    <section >
+
+    <section>
       <ul id="all-shows">
 
       </ul>
+    </section>
+    <section class="movie-popup">
+      <div class="movie-popup-wrap">
+        <div class="movie-popup-content">
+          <div class="movie-popup-close">
+            <i class="fas fa-times fa-2x"></i>
+          </div>
+          <div class="movie-popup-img">
+            <img src="." alt="movie-poster" class="movie-poster">
+          </div>
+          <div class="movie-popup-info">
+            <h2 class="movie-title"> </h2>
+            <p class="movie-year">Year: 2013</p>
+            <p class="movie-genre">Genres: "Drama" "Science-Fiction" "Thriller"</p>
+            <p class="movie-language"></p>
+            <p class="movie-type">Type: Scripted</p>
+            <p class="movie-rating">Rating: average: 6.5</p>
+            <p class="movie-description">About: Under the Dome is the story of a small town that is suddenly and
+              inexplicably sealed off from the rest of the
+              world by an enormous transparent dome. The town's inhabitants must deal with surviving the
+              post-apocalyptic conditions
+              while searching for answers about the dome, where it came from and if and when it will go away.</p>
+          </div>
+        </div>
+        <div class="comment-section">
+          <h3 class="comment-count">Comments(2)</h3>
+          <ul class="comment-list">
+            <li>03/02/2020 Alex: I love this show</li>
+            <li>03/02/2020 Alex: I love this show</li>
+          </ul>
+        </div>
+        <form id="form">
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="name" placeholder="Your name:" required>
+          <textarea name="comment" id="comment" rows="5" placeholder="Your comment:" required></textarea>
+          <button type="submit" id="submit">Add Comment</button>
+        </form>
+      </div>
     </section>
     <footer>
       <p>
