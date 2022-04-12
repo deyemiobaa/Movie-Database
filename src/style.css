@@ -154,6 +154,8 @@ i {
 }
 
 .movie-popup-close {
+  background: #fff;
+  border-radius: var(--radius);
   position: absolute;
   top: 0;
   right: 0;
@@ -171,6 +173,7 @@ i {
 
 .movie-popup-img > img {
   width: 100%;
+  margin: 0 auto;
   height: 100%;
 }
 
@@ -267,7 +270,6 @@ footer > p > a {
 
   .movie-popup-img {
     width: 50%;
-    height: 500px;
   }
 
   .movie-popup-info {
