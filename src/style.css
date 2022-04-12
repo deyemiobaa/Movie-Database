@@ -1,11 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  background: none;
   box-sizing: border-box;
+  text-decoration: none;
+  color: inherit;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+:root {
+  --color-primary: #ffc107;
+  --color-secondary: #f8f9fa;
+  --color-tertiary: #212529;
+  --border: 3px solid var(--color-tertiary);
+  --radius: 5px;
+  --font: 'Lato', sans-serif;
 }
 
 body {
-  background-color: bisque;
+  background-color: var(--color-secondary);
 }
 
 .logo {
@@ -20,23 +42,24 @@ body {
 
 .selection-wrap {
   display: flex;
-  column-gap: 20px;
-  width: 300px;
-  align-items: center;
+  flex-direction: column;
+  row-gap: 12px;
+  padding: 10px;
 }
 
 .header-main-wrap {
   display: flex;
   justify-content: space-between;
-  background-color: rgb(118, 110, 110);
-  padding-left: 30px;
-  padding-right: 30px;
+  background-color: var(--color-tertiary);
+  padding: 10px 30px;
 }
 
 select {
-  width: 145px;
+  font-size: 1rem;
   height: 30px;
   border-radius: 8px;
+  background: var(--color-secondary);
+  padding-right: 10px;
 }
 
 .header-info {
@@ -44,7 +67,9 @@ select {
 }
 
 .logo-name {
-  color: white;
+  color: var(--color-secondary);
+  font-size: 1.5rem;
+  padding-left: 20px;
 }
 
 header {
@@ -53,10 +78,32 @@ header {
   width: 100%;
 }
 
-@media only screen  and (max-width: 768px) {
+footer {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background: var(--color-tertiary);
+  font-family: var(--font);
+}
+
+footer > p {
+  color: var(--color-secondary);
+  font-size: 1.1rem;
+  padding-left: 20px;
+}
+
+footer > p > a {
+  text-decoration: underline;
+}
+
+@media only screen  and (min-width: 768px) {
   .selection-wrap {
-    flex-direction: column;
-    row-gap: 12px;
-    padding: 10px 10px;
+    flex-direction: row;
+    column-gap: 20px;
+    align-items: center;
   }
 }
