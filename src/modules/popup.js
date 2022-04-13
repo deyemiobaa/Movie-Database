@@ -7,6 +7,7 @@ const movieGenre = document.querySelector('.movie-genre');
 const movieType = document.querySelector('.movie-type');
 const movieRating = document.querySelector('.movie-rating');
 const movieDescription = document.querySelector('.movie-description');
+const moviePopupWrap = document.querySelector('.movie-popup-wrap');
 
 class Popup {
   replaceMultipleString = (str) => str.replace('</b>', '').replace('<b>', '').replace('</p>', '').replace('<p>', '')
@@ -25,6 +26,7 @@ class Popup {
   }
 
   populatePopup(currentShow) {
+    moviePopupWrap.id = currentShow.id;
     moviePosters.src = currentShow.image.original;
     movieTitle.textContent = `Name: ${currentShow.name}`;
     movieYear.textContent = `Year: ${currentShow.premiered.slice(0, 4)}`;
