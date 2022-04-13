@@ -1,6 +1,7 @@
-import getvShow from './getvshow.js';
+import { getvShow } from './getvshow.js';
 import selector from './selectors.js';
 import Popup from './popup.js';
+import { getAllComments } from './comments.js';
 
 const clickEvents = () => {
   const popup = new Popup();
@@ -10,6 +11,7 @@ const clickEvents = () => {
       const movieId = e.parentNode.parentNode.id;
       const currentShow = await popup.getPopup(movieId);
       popup.populatePopup(currentShow);
+      getAllComments(movieId);
     });
   });
   popup.closePopup();
