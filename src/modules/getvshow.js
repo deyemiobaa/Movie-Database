@@ -1,5 +1,4 @@
 /* eslint-disable import/no-cycle */
-import renderShows from './render.js';
 
 const getvShow = async () => {
   const response = await fetch('https://api.tvmaze.com/shows');
@@ -18,7 +17,6 @@ const addLikes = async (id) => {
         'Content-type': 'application/json; charset=UTF-8',
       },
     });
-  renderShows();
 };
 const getlikes = (async () => {
   const response = await fetch(url, { method: 'GET' });
@@ -45,4 +43,6 @@ const getComments = async (id) => {
   return response.json();
 };
 
-export { getvShow, addLikes, getlikes, addComments, getComments };
+export {
+  getvShow, addLikes, getlikes, addComments, getComments,
+};
