@@ -1,29 +1,8 @@
 /* eslint-disable import/no-cycle */
-import { getvShow, addLikes, getlikes } from './getvshow.js';
+import { getvShow, getlikes } from './getvshow.js';
 import selector from './selectors.js';
-import Popup from './popup.js';
-import { getAllComments } from './comments.js';
-
-const clickEvents = () => {
-  const likeBtn = document.querySelectorAll('.like-btn');
-  likeBtn.forEach((e) => {
-    e.addEventListener('click', () => {
-      const { id } = e.parentNode.parentNode;
-      addLikes(id);
-    });
-  });
-  const popup = new Popup();
-  const showList = document.querySelectorAll('.fa-comment');
-  showList.forEach((e) => {
-    e.addEventListener('click', async () => {
-      const movieId = e.parentNode.parentNode.id;
-      const currentShow = await popup.getPopup(movieId);
-      popup.populatePopup(currentShow);
-      getAllComments(movieId);
-    });
-  });
-  popup.closePopup();
-};
+import { likeCounter, showCounter } from './likeCounter.js';
+import clickEvents from './events.js';
 
 const renderShows = (async () => {
   let render;
@@ -31,11 +10,7 @@ const renderShows = (async () => {
   const likes = await getlikes();
   let likeCount = 0;
   shows.forEach((e) => {
-    likes.forEach((eachLikes) => {
-      if (String(eachLikes.item_id) === String(e.id)) {
-        likeCount = eachLikes.likes;
-      }
-    });
+    likeCount = likeCounter(e, likeCount, likes);
     render += `
     <li class="show"  id=${e.id}><img src=${e.image.medium} alt="movie-poster" class="movie-poster">
     <h3 class="show-name">${e.name}</h3>
@@ -51,7 +26,8 @@ const renderShows = (async () => {
   });
 
   selector.allShows.innerHTML = render.replace('undefined', '');
-  const movieSize = `<h3>${shows.length} shows Found in the Movie DabaBase</h3>`;
+
+  const movieSize = `<h3>${showCounter(shows)} shows Found in the Movie DabaBase</h3>`;
   selector.movieDbInfo.innerHTML = movieSize;
   clickEvents();
 });
