@@ -283,3 +283,10 @@ footer > p > a {
     width: 50%;
   }
 }
+
+.like-btn:active:hover{
+color: red;
+}
+.like-btn:hover{
+  color: red;
+  }
