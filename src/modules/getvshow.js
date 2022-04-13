@@ -45,4 +45,6 @@ const getComments = async (id) => {
   return response.json();
 };
 
-export { getvShow, addLikes, getlikes, addComments, getComments };
+export {
+  getvShow, addLikes, getlikes, addComments, getComments,
+};
