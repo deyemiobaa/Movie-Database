@@ -20,6 +20,7 @@ const renderShows = (async () => {
         <p class="like-count"> ${likeCount}</p>
         <i class="fa-solid fa-comment"></i>
       </div>
+      <div class="button-container"></div>
     </li>
     `;
     likeCount = 0;
