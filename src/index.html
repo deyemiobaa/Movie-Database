@@ -16,28 +16,11 @@
           <h1 class="logo-name">Movie DataBase</h1>
         </div>
         <div class="selection-wrap">
-          <select name="Genre" id="genre">
-            <option value="select-gener">Select Movie Genre</option>
-            <option value="action">Action</option>
-            <option value="adventure">Adventure</option>
-            <option value="anime">Anime</option>
-            <option value="childern">Children</option>
-            <option value="comedy">Comedy</option>
-            <option value="crime">Crime</option>
-            <option value="crime">Drama</option>
-            <option value="history">History</option>
-            <option value="horror">Horror</option>
-            <option value="romance">Romance</option>
-            <option value="science-fiction">Science-fiction</option>
-          </select>
-          <select name="type" id="type">
-            <option value="select-type">Select Movie Type</option>
-            <option value="scripted">Scripted</option>
-            <option value="animation">Animation</option>
-            <option value="sports">Reality</option>
-            <option value="documentary">Documentary</option>
-            <option value="news">News</option>
-          </select>
+          <form class="search-form">       
+            <input type="text"  id="search-bar" required placeholder="Search Movies"/>
+          <button id="search-btn">Search</button>
+        </form>
+
         </div>
       </div>
       <section id="movie-db-info"></section>

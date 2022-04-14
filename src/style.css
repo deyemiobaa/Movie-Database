@@ -291,3 +291,12 @@ footer > p > a {
 .like-btn:hover {
   color: rgb(223, 68, 68);
 }
+
+.search-form{
+  display: flex;
+}
+
+#search-bar{
+  width: 200px;
+  color: wheat;
+}
