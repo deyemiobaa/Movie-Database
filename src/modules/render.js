@@ -15,7 +15,7 @@ const renderShows = (async (shows) => {
   const likes = await getlikes();
   let likeCount = 0;
   if (showsData.length === 0) {
-    selector.allShows.innerHTML = '<h3 id="notfound">No Results Found for your queries </h3>';
+    selector.allShows.innerHTML = '<h3 id="notfound">No results found for your query </h3>';
   } else {
     showsData.forEach((e) => {
       likeCount = likeCounter(e, likeCount, likes);
@@ -31,7 +31,7 @@ const renderShows = (async (shows) => {
         try {
           img1 = e.show.image.medium;
         } catch (err) {
-          selector.allShows = 'Error while loading...';
+          img1 = 'https://img.icons8.com/external-others-iconmarket/344/external-error-search-others-iconmarket-3.png';
         }
       }
       render += `
@@ -47,10 +47,9 @@ const renderShows = (async (shows) => {
     `;
       likeCount = 0;
     });
-
     selector.allShows.innerHTML = render.replace('undefined', '');
   }
-  const movieSize = `<h3>${showCounter(showsData)} shows Found in the Movie DabaBase</h3>`;
+  const movieSize = `<h3>${showCounter(showsData)} shows found in the Movie ShowBox</h3>`;
   selector.movieDbInfo.innerHTML = movieSize;
   clickEvents();
   popupEvents();
