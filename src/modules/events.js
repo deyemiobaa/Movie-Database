@@ -3,20 +3,20 @@ import { addLikes } from './getvshow.js';
 import renderShows from './render.js';
 import Popup from './popup.js';
 import { getAllComments } from './comments.js';
-import {shows} from './search.js';
+import { shows } from './search.js';
+
 const clickEvents = () => {
   const likeBtn = document.querySelectorAll('.like-btn');
   likeBtn.forEach((e) => {
     e.addEventListener('click', () => {
       const { id } = e.parentNode.parentNode;
       addLikes(id);
-     setTimeout(() => {
-      renderShows(shows)
-    }, 500);
+      setTimeout(() => {
+        renderShows(shows);
+      }, 500);
     });
-    
   });
-  
+
   const popup = new Popup();
   const showList = document.querySelectorAll('.fa-comment');
   showList.forEach((e) => {
@@ -28,6 +28,5 @@ const clickEvents = () => {
     });
   });
   popup.closePopup();
-
 };
 export default clickEvents;

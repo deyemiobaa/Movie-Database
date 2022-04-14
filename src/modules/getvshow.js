@@ -1,15 +1,12 @@
 /* eslint-disable import/no-cycle */
 const getvShow = async (showurl) => {
-  if(showurl==undefined){
-  const response = await fetch('https://api.tvmaze.com/shows');  
-  return response.json();
-
-  }
-  else{
-    const response = await fetch(showurl); 
+  if (showurl === undefined) {
+    const response = await fetch('https://api.tvmaze.com/shows');
     return response.json();
   }
- 
+
+  const response = await fetch(showurl);
+  return response.json();
 };
 
 const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/ED1rQK1snOoAMYBCYLLf/likes';
@@ -53,5 +50,3 @@ const getComments = async (id) => {
 export {
   getvShow, addLikes, getlikes, addComments, getComments,
 };
-
-

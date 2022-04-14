@@ -6,34 +6,29 @@ import clickEvents from './events.js';
 
 const renderShows = (async (shows) => {
   let render;
-  let flag=true;   //true -> ALL flase -> search
-  let showsData=[];
-  if (shows==undefined){
-     showsData= await getvShow();
-  }
-  else{
-    showsData=shows;
-
+  let showsData = [];
+  if (shows === undefined) {
+    showsData = await getvShow();
+  } else {
+    showsData = shows;
   }
   const likes = await getlikes();
   let likeCount = 0;
   showsData.forEach((e) => {
-    likeCount =  likeCounter(e, likeCount, likes); 
-    let id,showName,img1;
-    if (shows==undefined){
-      id=e.id;
-      showName=e.name;
-      img1=e.image.medium;
-    }
-    else{
-       id=e.show.id;
-       showName=e.show.name;
-     
-      try{
-        img1=e.show.image.medium;
-      }
-      catch(err){
-        console.log("ERRRROOORR ",err);
+    likeCount = likeCounter(e, likeCount, likes);
+    let id; let showName; let img1;
+    if (shows === undefined) {
+      id = e.id;
+      showName = e.name;
+      img1 = e.image.medium;
+    } else {
+      id = e.show.id;
+      showName = e.show.name;
+
+      try {
+        img1 = e.show.image.medium;
+      } catch (err) {
+        selector.allShows = 'Error while loading...';
       }
     }
     render += `
@@ -49,13 +44,11 @@ const renderShows = (async (shows) => {
     `;
     likeCount = 0;
   });
-console.log("finsihed loop !")
   selector.allShows.innerHTML = render.replace('undefined', '');
 
   const movieSize = `<h3>${showCounter(showsData)} shows Found in the Movie DabaBase</h3>`;
   selector.movieDbInfo.innerHTML = movieSize;
   clickEvents();
 });
-
 
 export default renderShows;
