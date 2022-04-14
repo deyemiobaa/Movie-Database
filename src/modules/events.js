@@ -3,6 +3,7 @@ import { addLikes } from './getvshow.js';
 import renderShows from './render.js';
 import Popup from './popup.js';
 import { getAllComments } from './comments.js';
+import { shows } from './search.js';
 
 const clickEvents = () => {
   const likeBtn = document.querySelectorAll('.like-btn');
@@ -11,7 +12,7 @@ const clickEvents = () => {
       const { id } = e.parentNode.parentNode;
       addLikes(id);
       setTimeout(() => {
-        renderShows();
+        renderShows(shows);
       }, 500);
     });
   });
