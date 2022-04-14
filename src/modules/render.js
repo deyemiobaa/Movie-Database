@@ -35,14 +35,15 @@ const renderShows = (async (shows) => {
         }
       }
       render += `
-        <li class="show"  id=${id}><img src=${img1} alt="movie-poster" class="movie-poster">
-          <h3 class="show-name">${showName}</h3>
-          <div class="show-btns">
-            <i class="fa-solid fa-heart like-btn"></i>
-            <p> ${likeCount}</p>
-            <i class="fa-solid fa-comment"></i>
-          </div>
-        </li>
+    <li class="show"  id=${id}>
+      <h3 class="show-name">${showName}</h3>
+      <img src=${img1} alt="movie-poster" class="movie-poster">
+      <div class="show-btns">
+        <i class="fa-solid fa-heart like-btn"></i>
+        <p>${likeCount}</p>
+        <i class="fa-solid fa-comment"></i>
+      </div>
+    </li>
     `;
       likeCount = 0;
     });

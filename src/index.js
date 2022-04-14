@@ -4,6 +4,7 @@ import renderShows from './modules/render.js';
 import { postAComment } from './modules/comments.js';
 import { search } from './modules/search.js';
 import delayDisplay from './modules/animations.js';
+import selector from './modules/selectors.js';
 import menu from './modules/menu.js';
 
 const menu1 = document.querySelector('#menu');
@@ -18,8 +19,16 @@ searchBtn.addEventListener('click', (e) => {
   search();
 });
 
+
 document.querySelector('.poster').src = poster;
 
-delayDisplay();
+const sessionstore = sessionStorage.getItem('session') || false;
+if (sessionstore === false) {
+  delayDisplay();
+  sessionStorage.setItem('session', 'true');
+} else {
+  selector.overlay.style.display = 'none';
+}
+
 renderShows();
 postAComment();
