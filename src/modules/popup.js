@@ -11,6 +11,8 @@ const moviePopupWrap = document.querySelector('.movie-popup-wrap');
 
 class Popup {
   replaceMultipleString = (str) => str.replace('</b>', '').replace('<b>', '').replace('</p>', '').replace('<p>', '')
+    .replace('<i>', '')
+    .replace('</i>', '')
 
   getMovieGenres = (array) => {
     let res = '';
@@ -34,7 +36,7 @@ class Popup {
     movieType.textContent = currentShow.type;
     movieLanguage.textContent = `Language: ${currentShow.language}`;
     movieRating.textContent = `Average rating: ${currentShow.rating.average}`;
-    movieDescription.textContent = `Description: ${this.replaceMultipleString(currentShow.summary)}`;
+    movieDescription.textContent = `Summary: ${this.replaceMultipleString(currentShow.summary)}`;
     moviePopup.style.display = 'flex';
   }
 

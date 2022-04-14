@@ -43,7 +43,11 @@ const addComments = async (itemId, username, comment) => {
 };
 
 const getComments = async (id) => {
-  const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/ED1rQK1snOoAMYBCYLLf/comments?item_id=${id}`);
+  let response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/ED1rQK1snOoAMYBCYLLf/comments?item_id=${id}`);
+  if (response.status === 400) {
+    response = [];
+    return response;
+  }
   return response.json();
 };
 

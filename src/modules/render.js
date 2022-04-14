@@ -2,7 +2,7 @@
 import { getvShow, getlikes } from './getvshow.js';
 import selector from './selectors.js';
 import { likeCounter, showCounter } from './likeCounter.js';
-import clickEvents from './events.js';
+import { clickEvents, popupEvents } from './events.js';
 
 const renderShows = (async (shows) => {
   let render;
@@ -40,6 +40,8 @@ const renderShows = (async (shows) => {
     <p> ${likeCount}</p>
     <i class="fa-solid fa-comment"></i>
     </div>
+      <div class="button-container"></div>
+
     </li>
     `;
     likeCount = 0;
@@ -49,6 +51,7 @@ const renderShows = (async (shows) => {
   const movieSize = `<h3>${showCounter(showsData)} shows Found in the Movie DabaBase</h3>`;
   selector.movieDbInfo.innerHTML = movieSize;
   clickEvents();
+  popupEvents();
 });
 
 export default renderShows;
