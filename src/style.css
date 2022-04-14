@@ -292,11 +292,11 @@ footer > p > a {
   color: rgb(223, 68, 68);
 }
 
-.search-form{
+.search-form {
   display: flex;
 }
 
-#search-bar{
+#search-bar {
   width: 200px;
   color: wheat;
 }
