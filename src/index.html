@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie DataBase</title>
+    <title>The ShowBox</title>
     <script src="https://kit.fontawesome.com/eb94992e2c.js" crossorigin="anonymous"></script>
   </head>
 
@@ -13,39 +13,15 @@
       <div class="header-main-wrap">
         <div class="logo-wrap">
           <img src="https://img.icons8.com/color/344/film-reel.png" alt="movie-database-logo" class="logo">
-          <h1 class="logo-name">Movie DataBase</h1>
+          <h1 class="logo-name">The ShowBox</h1>
         </div>
         <div class="selection-wrap">
-          <select name="Genre" id="genre">
-            <option value="select-gener">Select Movie Genre</option>
-            <option value="action">Action</option>
-            <option value="adventure">Adventure</option>
-            <option value="anime">Anime</option>
-            <option value="childern">Children</option>
-            <option value="comedy">Comedy</option>
-            <option value="crime">Crime</option>
-            <option value="crime">Drama</option>
-            <option value="history">History</option>
-            <option value="horror">Horror</option>
-            <option value="romance">Romance</option>
-            <option value="science-fiction">Science-fiction</option>
-          </select>
-          <select name="type" id="type">
-            <option value="select-type">Select Movie Type</option>
-            <option value="scripted">Scripted</option>
-            <option value="animation">Animation</option>
-            <option value="sports">Reality</option>
-            <option value="documentary">Documentary</option>
-            <option value="news">News</option>
-          </select>
         </div>
       </div>
       <section id="movie-db-info"></section>
     </header>
-
     <section>
       <ul id="all-shows">
-
       </ul>
     </section>
     <section class="movie-popup">
@@ -71,19 +47,41 @@
               while searching for answers about the dome, where it came from and if and when it will go away.</p>
           </div>
         </div>
-        <div class="comment-section">
-          <h3 class="comment-count">Comments</h3>
-          <ul class="comment-list">
-          </ul>
+        <div class="form-content">
+          <div class="comment-section">
+            <h3 class="comment-count">Comments</h3>
+            <ul class="comment-list">
+            </ul>
+          </div>
+          <form id="form">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" placeholder="Your name:" required>
+            <textarea name="comment" id="comment" rows="5" placeholder="Your comment:" required></textarea>
+            <button type="submit" id="submit">Add Comment</button>
+          </form>
         </div>
-        <form id="form">
-          <label for="name">Name:</label>
-          <input type="text" name="name" id="name" placeholder="Your name:" required>
-          <textarea name="comment" id="comment" rows="5" placeholder="Your comment:" required></textarea>
-          <button type="submit" id="submit">Add Comment</button>
-        </form>
       </div>
     </section>
+    <div class="overlay">
+      <div class="img-container">
+        <img src="." alt="wallpaper" class="poster">
+      </div>
+      <div class="text-container">
+        <div class="text">
+          <p>
+            Welcome to The ShowBox.
+            <br>
+            Here, you can find all your favorite movies and shows in one place.
+          </p>
+        </div>
+        <button class="overlay-button">
+          Let's go! <i class="fas fa-play fa-beat-fade"></i>
+        </button>
+      </div>
+    </div>
+    <div class="loader">
+      <i class="fa-solid fa-spinner fa-spin-pulse fa-spin-reverse fa-5x"></i>
+    </div>
     <footer>
       <p>
         &copy; 2022 Movie Database by <a href="https://github.com/deyemiobaa">Sodiq</a> &amp; <a
