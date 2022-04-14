@@ -12,6 +12,10 @@ const clickEvents = () => {
       addLikes(id);
     });
   });
+  renderShows();
+};
+
+const popupEvents = () => {
   const popup = new Popup();
   const showList = document.querySelectorAll('.fa-comment');
   showList.forEach((e) => {
@@ -23,6 +27,5 @@ const clickEvents = () => {
     });
   });
   popup.closePopup();
-  renderShows();
 };
-export default clickEvents;
+export { clickEvents, popupEvents };
