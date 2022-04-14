@@ -14,24 +14,27 @@ const renderShows = (async (shows) => {
   }
   const likes = await getlikes();
   let likeCount = 0;
-  showsData.forEach((e) => {
-    likeCount = likeCounter(e, likeCount, likes);
-    let id; let showName; let img1;
-    if (shows === undefined) {
-      id = e.id;
-      showName = e.name;
-      img1 = e.image.medium;
-    } else {
-      id = e.show.id;
-      showName = e.show.name;
+  if (showsData.length === 0) {
+    selector.allShows.innerHTML = '<h3 id="notfound">No Results Found for your queries </h3>';
+  } else {
+    showsData.forEach((e) => {
+      likeCount = likeCounter(e, likeCount, likes);
+      let id; let showName; let img1;
+      if (shows === undefined) {
+        id = e.id;
+        showName = e.name;
+        img1 = e.image.medium;
+      } else {
+        id = e.show.id;
+        showName = e.show.name;
 
-      try {
-        img1 = e.show.image.medium;
-      } catch (err) {
-        selector.allShows = 'Error while loading...';
+        try {
+          img1 = e.show.image.medium;
+        } catch (err) {
+          selector.allShows = 'Error while loading...';
+        }
       }
-    }
-    render += `
+      render += `
     <li class="show"  id=${id}><img src=${img1} alt="movie-poster" class="movie-poster">
     <h3 class="show-name">${showName}</h3>
     <div class="show-btns">
@@ -44,10 +47,11 @@ const renderShows = (async (shows) => {
 
     </li>
     `;
-    likeCount = 0;
-  });
-  selector.allShows.innerHTML = render.replace('undefined', '');
+      likeCount = 0;
+    });
 
+    selector.allShows.innerHTML = render.replace('undefined', '');
+  }
   const movieSize = `<h3>${showCounter(showsData)} shows Found in the Movie DabaBase</h3>`;
   selector.movieDbInfo.innerHTML = movieSize;
   clickEvents();

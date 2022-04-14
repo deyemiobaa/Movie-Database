@@ -6,9 +6,18 @@ import renderShows from './render.js';
 
 let shows;
 const search = async () => {
-  const { value } = document.getElementById('search-bar');
-  const url = `https://api.tvmaze.com/search/shows?q=${value}`;
-  shows = await getvShow(url);
-  renderShows(shows);
+  try {
+    const cover = document.getElementById('menu-wraper');
+    cover.style.cssText = 'display:none;';
+    const { value } = document.getElementById('search-bar');
+    const url = `https://api.tvmaze.com/search/shows?q=${value}`;
+    shows = await getvShow(url);
+    renderShows(shows);
+  } catch (err) {
+    const { value } = document.getElementById('search-bar');
+    const url = `https://api.tvmaze.com/search/shows?q=${value}`;
+    shows = await getvShow(url);
+    renderShows(shows);
+  }
 };
 export { search, shows };
