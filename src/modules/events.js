@@ -16,8 +16,6 @@ const clickEvents = () => {
       }, 500);
     });
   });
-
-
 };
 
 const openShow = (e, id) => {
