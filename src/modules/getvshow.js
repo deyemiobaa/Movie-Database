@@ -1,7 +1,11 @@
 /* eslint-disable import/no-cycle */
+const getvShow = async (showurl) => {
+  if (showurl === undefined) {
+    const response = await fetch('https://api.tvmaze.com/shows');
+    return response.json();
+  }
 
-const getvShow = async () => {
-  const response = await fetch('https://api.tvmaze.com/shows');
+  const response = await fetch(showurl);
   return response.json();
 };
 
