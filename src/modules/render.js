@@ -40,7 +40,7 @@ const renderShows = (async (shows) => {
       <img src=${img1} alt="movie-poster" class="movie-poster">
       <div class="show-btns">
         <i class="fa-solid fa-heart like-btn"></i>
-        <p>${likeCount}</p>
+        <p class="like-count">${likeCount}</p>
         <i class="fa-solid fa-comment"></i>
       </div>
     </li>
