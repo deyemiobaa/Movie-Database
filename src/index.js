@@ -1,6 +1,6 @@
 import './style.css';
-import poster from './modules/wallpaper-dk.svg';
-import posterMb from './modules/wallpaper-mb.svg';
+import poster from './modules/wallpaper-dk.png';
+import posterMb from './modules/wallpaper-mb.png';
 import renderShows from './modules/render.js';
 import { postAComment } from './modules/comments.js';
 import { search } from './modules/search.js';
