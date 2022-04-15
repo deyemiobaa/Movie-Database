@@ -9,7 +9,7 @@
 
 ### You can view it live [here](https://deyemiobaa.github.io/Movie-Database/)
 
-### Watch our project presentation [here](https://youtu.be/SZ5FG2yt8J8)
+### Watch our project presentation [here](https://youtu.be/5oZ5C4DJtag)
 
 <img src="src/app-sc.png" alt="Project Snapshot">
 
