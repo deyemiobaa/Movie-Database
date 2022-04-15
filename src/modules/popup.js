@@ -31,11 +31,11 @@ class Popup {
     moviePopupWrap.id = currentShow.id;
     moviePosters.src = currentShow.image.original;
     movieTitle.textContent = `Name: ${currentShow.name}`;
-    movieYear.textContent = `Year: ${currentShow.premiered.slice(0, 4)}`;
+    movieYear.innerHTML = `Year: <i class="fa-solid fa-calendar star"></i> ${currentShow.premiered.slice(0, 4)}`;
     movieGenre.textContent = `Genres: ${this.getMovieGenres(currentShow.genres)}`;
-    movieType.textContent = currentShow.type;
+    movieType.textContent = `Type: ${currentShow.type}`;
     movieLanguage.textContent = `Language: ${currentShow.language}`;
-    movieRating.textContent = `Average rating: ${currentShow.rating.average}`;
+    movieRating.innerHTML = `Average rating:  <i class="fa-solid fa-star-half-stroke star"></i> ${currentShow.rating.average}`;
     movieDescription.textContent = `Summary: ${this.replaceMultipleString(currentShow.summary)}`;
     moviePopup.style.display = 'flex';
   }

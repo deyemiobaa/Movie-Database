@@ -1,11 +1,9 @@
 import { search } from './search.js';
 
 const container = document.getElementById('menu-cover');
-const searchContainer = document.querySelector('.search');
-const searchBtn = document.getElementById('search-btn');
-const closeBtn = document.querySelector('.close-menu');
 
 const closeMenu = () => {
+  const searchContainer = document.querySelector('.search');
   searchContainer.style.display = 'none';
   setTimeout(() => {
     container.style.width = '0';
@@ -22,14 +20,19 @@ const menu = () => {
     <button id="search-btn">Search</button>
   </div>`;
   container.style.width = '100%';
+  const searchContainer = document.querySelector('.search');
   setTimeout(() => {
     searchContainer.style.display = 'flex';
   }, 700);
+  const searchBtn = document.querySelector('#search-btn');
   searchBtn.addEventListener('click', (e) => {
     e.preventDefault();
     search();
     closeMenu();
   });
-  closeBtn.addEventListener('click', closeMenu);
+  const closeBtn = document.querySelector('.close-menu');
+  closeBtn.addEventListener('click', () => {
+    closeMenu();
+  });
 };
 export default menu;

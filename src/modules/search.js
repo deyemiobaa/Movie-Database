@@ -18,6 +18,11 @@ const search = async () => {
     const url = `https://api.tvmaze.com/search/shows?q=${value}`;
     shows = await getvShow(url);
     renderShows(shows);
+  } finally {
+    const load = document.querySelector('.load-animation');
+    setTimeout(() => {
+      load.style.cssText = 'display:none';
+    }, 800);
   }
 };
 export { search, shows };

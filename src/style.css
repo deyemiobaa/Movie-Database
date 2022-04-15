@@ -12,6 +12,10 @@
   color: #fff;
 }
 
+.star {
+  color: yellow;
+}
+
 ol,
 ul {
   list-style: none;
@@ -44,6 +48,10 @@ header {
   align-items: center;
 }
 
+.load-animation {
+  display: none;
+}
+
 .logo-name {
   font: var(--font);
 }
@@ -63,7 +71,7 @@ header {
 }
 
 #search-bar {
-  width: 200px;
+  width: 300px;
 }
 
 .search-form {
@@ -91,7 +99,7 @@ header {
 }
 
 .search {
-  display: none;
+  /* display: none; */
   flex-direction: column;
   align-items: center;
   row-gap: 20px;

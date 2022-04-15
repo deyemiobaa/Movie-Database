@@ -19,6 +19,8 @@ hamburger.addEventListener('click', () => {
 const searchBtn = document.getElementById('search-btn');
 searchBtn.addEventListener('click', (e) => {
   e.preventDefault();
+  const load = document.querySelector('.load-animation');
+  load.style.cssText = 'display:block';
   search();
 });
 
