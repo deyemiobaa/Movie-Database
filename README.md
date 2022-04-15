@@ -35,6 +35,9 @@ git clone  <https://github.com/deyemiobaa/Movie-Database.git>
 - run ```npm i``` to install all dependencies
 - run ```npm run build``` to bundle the project with webpack, and
 - run ```npm start``` to launch the application
+  Runs the app in the development mode.\
+   Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
+- run ``` npm test ``` To run Unit test run:
 
 ### Authors
 
