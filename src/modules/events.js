@@ -8,7 +8,7 @@ import { shows } from './search.js';
 const clickEvents = () => {
   const likeBtn = document.querySelectorAll('.like-btn');
   likeBtn.forEach((e) => {
-    e.addEventListener('click',async () => {
+    e.addEventListener('click', async () => {
       const { id } = e.parentNode.parentNode;
       await addLikes(id);
       setTimeout(() => {
