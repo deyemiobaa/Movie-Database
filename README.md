@@ -1,4 +1,4 @@
-# ShowBox Movies 
+# ShowBox Movie Database
 > Search for info about your favorite movies and tv shows
 
 ### Built With
