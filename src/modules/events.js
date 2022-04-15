@@ -8,12 +8,12 @@ import { shows } from './search.js';
 const clickEvents = () => {
   const likeBtn = document.querySelectorAll('.like-btn');
   likeBtn.forEach((e) => {
-    e.addEventListener('click', () => {
+    e.addEventListener('click',async () => {
       const { id } = e.parentNode.parentNode;
-      addLikes(id);
+      await addLikes(id);
       setTimeout(() => {
         renderShows(shows);
-      }, 500);
+      }, 200);
     });
   });
 };

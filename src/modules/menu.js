@@ -5,8 +5,8 @@ const container = document.getElementById('menu-cover');
 const closeMenu = () => {
   const searchContainer = document.querySelector('.search');
   searchContainer.style.display = 'none';
+  container.style.width = '0';
   setTimeout(() => {
-    container.style.width = '0';
     container.innerHTML = '';
   }, 500);
 };
