@@ -1,5 +1,6 @@
 import './style.css';
 import poster from './modules/wallpaper-dk.svg';
+import posterMb from './modules/wallpaper-mb.svg';
 import renderShows from './modules/render.js';
 import { postAComment } from './modules/comments.js';
 import { search } from './modules/search.js';
@@ -7,20 +8,19 @@ import delayDisplay from './modules/animations.js';
 import selector from './modules/selectors.js';
 import menu from './modules/menu.js';
 
-const menu1 = document.querySelector('#menu');
+document.querySelector('.poster').src = poster;
+document.querySelector('.poster-mb').src = posterMb;
 
-menu1.addEventListener('click', () => {
+const hamburger = document.querySelector('#menu');
+hamburger.addEventListener('click', () => {
   menu();
 });
 
-const searchBtn = document.querySelector('#search-btn');
+const searchBtn = document.getElementById('search-btn');
 searchBtn.addEventListener('click', (e) => {
   e.preventDefault();
   search();
 });
-
-
-document.querySelector('.poster').src = poster;
 
 const sessionstore = sessionStorage.getItem('session') || false;
 if (sessionstore === false) {
