@@ -226,7 +226,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"images/e9fdcbda271eda4dbf4b.png\";\n\n//# sourceURL=webpack://movie-database/./src/modules/wallpaper-dk.png?");
+eval("module.exports = __webpack_require__.p + \"images/d338eab0a8aa1dbd6daa.png\";\n\n//# sourceURL=webpack://movie-database/./src/modules/wallpaper-dk.png?");
 
 /***/ }),
 
@@ -236,7 +236,7 @@ eval("module.exports = __webpack_require__.p + \"images/e9fdcbda271eda4dbf4b.png
   \**************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"images/6241f736931108d2bf54.png\";\n\n//# sourceURL=webpack://movie-database/./src/modules/wallpaper-mb.png?");
+eval("module.exports = __webpack_require__.p + \"images/6afcce15c5608243e0f0.png\";\n\n//# sourceURL=webpack://movie-database/./src/modules/wallpaper-mb.png?");
 
 /***/ })
 
